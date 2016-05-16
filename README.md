@@ -5,8 +5,9 @@ First, fetc data from backend on startup, and then sync local dir to backend reg
 
 ## Required envaironment variables
 
-$AWS_ACCESS_KEY_ID
-$AWS_SECRET_ACCESS_KEY
-$VOLUME
-$BUCKET_NAME
-
+- `$AWS_ACCESS_KEY_ID`
+- `$AWS_SECRET_ACCESS_KEY`
+- `$BUCKET_NAME`
+ - S3 bucket name.
+- `$VOLUME`
+ - A directory path that is synchronized to Amazon S3. It is supporsed to use with data volume.
