@@ -1,5 +1,7 @@
 FROM alpine
 
+MAINTAINER sisidovski <shunya.shishido@gmail.com>
+
 ARG workdir=sync-backend
 
 RUN apk --update add python3 python3-dev
