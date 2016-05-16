@@ -18,4 +18,4 @@ if [ -z $AWS_SECRET_ACCESS_KEY ]; then
 fi
 
 aws s3 sync s3://$BUCKET_NAME/ $VOLUME
-echo "*/10 * * * * $(which aws) s3 sync $VOLUME s3://$BUCKET_NAME/" > /var/spool/cron/crontabs/root && crond -l 2 -f
+echo "*/10 * * * * $(which aws) s3 sync $VOLUME s3://$BUCKET_NAME/ && echo \"synced: `date`\"" > /var/spool/cron/crontabs/root && crond -l 2 -f
